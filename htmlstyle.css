@@ -3,7 +3,7 @@
 #logon {
   position: absolute;
   top: 30%;
-  left: 40%;
+  left: 5%;
   background: rgba(29, 36, 57, 0.8);
   background-clip: border-box;
   padding: 50px;
@@ -28,7 +28,6 @@
   transition: all 0.51s ease-in-out;
   border-radius: 0px;
   padding: 50px;
-  left: 40%;
   background: rgba(29, 36, 57, 255);
 }
 
@@ -36,7 +35,6 @@
   transition: all 0.51s ease-in-out;
   border-radius: 100px;
   padding: 50px;
-  left: 40%;
   background: rgba(29, 36, 57, 0.8);
 }
 

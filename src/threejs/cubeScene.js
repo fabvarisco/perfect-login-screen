@@ -29,7 +29,7 @@ export default class CastleScene extends THREE.Scene {
         this.createParticles();
         this.createObjects();
         this.createRender();
-        window.addEventListener('resize', this.onWindowResize, false);
+        window.addEventListener('resize', () => this.onWindowResize(), false);
         this.background = new THREE.Color(0x1B2631);
 
     }
@@ -87,11 +87,12 @@ export default class CastleScene extends THREE.Scene {
     }
 
     onWindowResize() {
+        this.width = window.innerWidth;
+        this.height = window.innerHeight;
 
-        this.camera.cam.aspect = window.innerWidth / window.innerHeight;
-        this.camera.cam.updateProjectionMatrix();
+        this.camera.aspect = this.width / this.height;
+        this.camera.updateProjectionMatrix();
 
-        this.renderer.setSize(window.innerWidth, window.innerHeight);
-
+        this.renderer.setSize(this.width, this.height);
     }
 }
