@@ -1,5 +1,27 @@
 @import url("hover.css");
 
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(29, 36, 57, 255);
+  font-family: "MedievalSharp", cursive;
+  color: rgba(84, 109, 179, 255);
+  font-size: 30px;
+  transition: opacity 0.51s ease-in-out;
+}
+
+#loading.loaded {
+  opacity: 0;
+  pointer-events: none;
+}
+
 #logon {
   position: absolute;
   top: 30%;

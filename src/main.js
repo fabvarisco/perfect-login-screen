@@ -1,5 +1,12 @@
+import * as THREE from "three";
 import CastleScene from "./threejs/castleScene";
 import CubeScene from "./threejs/cubeScene";
+
+const loadingScreen = document.querySelector("#loading");
+
+THREE.DefaultLoadingManager.onLoad = () => {
+  loadingScreen.classList.add("loaded");
+};
 
 const WIDTH = window.innerWidth;
 const HEIGHT = window.innerHeight;
